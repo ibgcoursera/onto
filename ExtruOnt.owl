@@ -1,0 +1,1865 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#"
+     xml:base="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:om-2="http://www.ontology-of-units-of-measure.org/resource/om-2/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+	 xmlns:s4inma="https://w3id.org/def/saref4inma#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:d34extruont="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/3D4ExtruOnt#"
+     xmlns:om4extruont="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/OM4ExtruOnt#"
+     xmlns:sensors4extruont="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:components4extruont="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#">
+    <owl:Ontology rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt">
+        <owl:imports rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/OM4ExtruOnt.owl"/>
+        <owl:imports rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt.owl"/>
+        <owl:imports rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt.owl"/>
+        <owl:imports rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt.owl"/>
+        <owl:imports rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/3D4ExtruOnt.owl"/>
+        <dc:contributor xml:lang="en">BDI Interoperable Databases Group - University of the Basque Country UPV/EHU</dc:contributor>
+        <dc:date xml:lang="en">2019-04-14</dc:date>
+        <dc:description xml:lang="en">An RDF/OWL schema for representing an extruder</dc:description>
+        <dc:title xml:lang="en">ExtruOnt</dc:title>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <rdfs:comment>An RDF/OWl Schema for representing an extruder</rdfs:comment>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#_ProductCode -->
+
+    <owl:AnnotationProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#ProductCode">
+        <rdfs:label>Product code</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#_ProductSize -->
+
+    <owl:AnnotationProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#ProductSize">
+        <rdfs:label>Product size</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#_ProductType -->
+
+    <owl:AnnotationProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#ProductType">
+        <rdfs:label>Product type</rdfs:label>
+    </owl:AnnotationProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/def/saref4inma#creates -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4inma#creates">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/saref4inma#isCreatedIn"/>
+        <rdfs:comment>A relation between a production process (e.g., Batch) that creates one or more tangible objects (e.g., Items)</rdfs:comment>
+        <rdfs:label>creates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#hasSize -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4inma#hasSize">
+        <rdfs:comment>A relationship to count the amount of certain objects in a collection (e.g., size of a material batch)</rdfs:comment>
+        <rdfs:label>has size</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#isCreatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4inma#isCreatedIn">
+        <rdfs:comment>An Item is created in an ItemBatch.</rdfs:comment>
+        <rdfs:label>is created in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#needsEquipment -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4inma#needsEquipment">
+        <rdfs:comment>A relationship indicating that an entity needs a particular equipment to be produced</rdfs:comment>
+        <rdfs:label>needs equipment</rdfs:label>
+    </owl:ObjectProperty>
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#has3DRepresentation -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#has3DRepresentation">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/x3d/Transform"/>
+        <rdfs:comment xml:lang="en">Indicates the relation between a spatial object and its representation in a 3D scene.</rdfs:comment>
+        <rdfs:label xml:lang="en">has 3D representation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/hasPhenomenon -->
+
+    <rdf:Description rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/hasPhenomenon">
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#PlasticBottle -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#PlasticBottle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#Item"/>
+        <rdfs:comment>A plastic bottle is a bottle constructed from high-density plastic.</rdfs:comment>
+        <rdfs:label>Plastic Bottle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#PlasticBottleBatch -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/ExtruOnt#PlasticBottleBatch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#ItemBatch"/>
+        <rdfs:comment>A collection of plastic bottles.</rdfs:comment>
+        <rdfs:label>Plastic Bottle Batch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Batch -->
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Batch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#needsEquipment"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4inma#ProductionEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#hasSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/saref4inma#Size"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A uniform collection of tangible objects or Lot. This can either be a collection of produced items (i.e. the outflow of products) or a collection of raw material or required material (i.e. the inflow of products). It is assumed that the objects in a batch are similar and thus have shared attributes. Note that this definition is broader than the definition in IEC 61512, which defines a batch as the material that is being produced (whereas in SAREF4INMA a batch can be items or materials).</rdfs:comment>
+        <rdfs:label>Batch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Item -->
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Item">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#isCreatedIn"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4inma#ItemBatch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#isCreatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/saref4inma#ItemBatch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A tangible object which can be unique identified, for example, with a GTIN in the form of a barcode/QR/RFID tag. An item product can be the result of the organization&apos;s production process (i.e. outflow of objects/goods) or can be uniquely identifiable material (i.e. inflow of objects/supplies). Each item is part of exactly one ItemBatch, whereas each ItemBatch contains only Items which have similar properties. An item can consists of multiple Batches and other Items (i.e. subassemblies).</rdfs:comment>
+        <rdfs:label>Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ItemBatch -->
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#ItemBatch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4inma#Batch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4inma#creates"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4inma#Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A uniform collection of tangible objects which are relevant for the prodcution process. The ItemBatch consists of a set of objects with similar properties (e.g. a certain type of sensors or metal sheets). The difference between ItemBatch and MaterialBatch is that individual items can be traced in a ItemBatch, whereas this is not possible in a MaterialBatch, meaning that, for example, it is possible to trace the individual metal sheet used in a ItemBatch. This implies that the objects in an ItemBatch have an unique identifier (e.g. a GTIN code in the form of a barcode/QR-code or RFID tag).</rdfs:comment>
+        <rdfs:label>Item Batch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#Size -->
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4inma#Size">
+        <rdfs:comment>The amount of certain objects in a collection (e.g., size of a material batch).</rdfs:comment>
+        <rdfs:label>Size</rdfs:label>
+    </owl:Class>
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#connected"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MeltingTemperatureSensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Sensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MeltingTemperatureSensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Controller -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Controller">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#FeedRateSensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#connected"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MotorConsumptionSensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MotorConsumptionSensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MotorRPMSensor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Sensor -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ThrustBearing">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/spatial4ExtruOnt#rcc5pp"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Extruder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Barrel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BreakerPlate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Die"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#ExtrusionHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Fan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedHopper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Filter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#GearBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#HeaterBand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#RuptureDisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#BullGear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#FeedThroat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Screw"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#FeedRateSensor -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#FeedRateSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Polymer"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MeltingTemperatureSensor -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MeltingTemperatureSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Polymer"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MotorConsumptionSensor -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MotorConsumptionSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MotorRPMSensor -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#MotorRPMSensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeObservation"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Motor"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#Sensor -->
+
+    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/sensors4ExtruOnt#Sensor">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/components4ExtruOnt#Sensor"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.owl-ontologies.com/mason.owl#Machine-tool -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/mason.owl#Machine-tool">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/def/saref4inma#ProductionEquipment -->
+
+    <rdf:Description rdf:about="https://w3id.org/def/saref4inma#ProductionEquipment">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
