@@ -1,0 +1,1478 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bdi.si.ehu.es/bdi/SSDOntFM#"
+     xml:base="http://bdi.si.ehu.es/bdi/SSDOntFM"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_0ae90f3b_b75f_45b1_abbf_15eeda321d18 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_0ae90f3b_b75f_45b1_abbf_15eeda321d18">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1cdf466b_65ee_419d_84b0_7cc44932395e"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_42605488_f07f_4b51_b7f4_09a5b4078325"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_a1faf1b6_7eab_445f_a4f9_28305722a6f8"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">hasMBDItemType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_25b1ece3_da6f_4da9_a760_8f9aa07db05f -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_25b1ece3_da6f_4da9_a760_8f9aa07db05f">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cbacdb8a_1075_4edb_911f_905069d72ec2"/>
+        <rdfs:label xml:lang="es">hasDrugIntake</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_279c6995_743a_42d1_a6c0_b830b5879853 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_279c6995_743a_42d1_a6c0_b830b5879853">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+        <rdfs:label xml:lang="en">hasMBDItem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_2bb500aa_099a_4004_abc8_60b75d2ce107 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_2bb500aa_099a_4004_abc8_60b75d2ce107">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_94988f7f_4897_4e11_bd8d_a6b3af1a7da4"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_4e299f3f_7857_4041_853f_383c83e7108a"/>
+        <rdfs:label xml:lang="es">hasGender</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_2f28349d_d61b_44f5_8f56_e59ff75f2dcb -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_2f28349d_d61b_44f5_8f56_e59ff75f2dcb">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_31e51d85_39ca_4f3e_8816_65ce7e1ca62c"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5424f6fd_bab3_44d6_a22f_e0df75ddf707"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_22bff31e_fc5d_4eaa_bf1a_30c24700e6b8"/>
+        <rdfs:label xml:lang="es">hasInterventionTypeSugar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4826fc9c_c497_4bec_875e_6a25b555bba3 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4826fc9c_c497_4bec_875e_6a25b555bba3">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9"/>
+        <rdfs:label xml:lang="en">hasCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4a020803_2bac_46f2_8771_f19ccb22b526 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4a020803_2bac_46f2_8771_f19ccb22b526">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0003e29a_df26_4201_be6f_0dcdc84669c7"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+        <rdfs:label xml:lang="en">hasSubject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_582d7e75_b43f_478f_a895_b518cab4f6ce -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_582d7e75_b43f_478f_a895_b518cab4f6ce">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1"/>
+        <rdfs:label xml:lang="en">hasAge</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_60b40e82_f60b_4cd2_9b49_6a04fa811258 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_60b40e82_f60b_4cd2_9b49_6a04fa811258">
+        <rdfs:subPropertyOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4826fc9c_c497_4bec_875e_6a25b555bba3"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9"/>
+        <rdfs:label xml:lang="es">hasMainCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_616ae2b0_4c48_459d_8bbd_d3dd1175b6f5 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_616ae2b0_4c48_459d_8bbd_d3dd1175b6f5">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_777bfb53_94d6_4ab5_89d9_00382bed9257"/>
+        <rdfs:label xml:lang="en">hasFrequency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_787ea754_94b7_4f64_a25a_1ecbc1906eda -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_787ea754_94b7_4f64_a25a_1ecbc1906eda">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057"/>
+        <rdfs:label xml:lang="en">hasResult</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_7b5512ee_bdb4_4a4c_bca6_315630adfc06 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_7b5512ee_bdb4_4a4c_bca6_315630adfc06">
+        <rdfs:subPropertyOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4826fc9c_c497_4bec_875e_6a25b555bba3"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9"/>
+        <rdfs:label xml:lang="es">hasOtherCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_84a93a8e_4e28_4f11_a667_d76b50b26970 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_84a93a8e_4e28_4f11_a667_d76b50b26970">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_3cdcc380_2d19_459e_9faa_ed0efa98ff98"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023"/>
+        <rdfs:label xml:lang="es">inFormOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_953a31f0_8c16_4f4c_b1c9_b76b1bf504ff -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_953a31f0_8c16_4f4c_b1c9_b76b1bf504ff">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+        <rdfs:label xml:lang="en">isResultOfPhase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_ac7b03c5_d719_4816_b9f4_e18bf0bde8bf -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_ac7b03c5_d719_4816_b9f4_e18bf0bde8bf">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_3cdcc380_2d19_459e_9faa_ed0efa98ff98"/>
+        <rdfs:label xml:lang="en">hasOutcome</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cdb5e748_f409_4b7f_8b8b_feca3fc8996a -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cdb5e748_f409_4b7f_8b8b_feca3fc8996a">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e14e6d5f_2631_450e_8f3e_828e3bc1c7da"/>
+        <rdfs:label xml:lang="en">hasFeatureOfInterest</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cf1c6fdc_c479_4561_97b0_bbe6a821b87d -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cf1c6fdc_c479_4561_97b0_bbe6a821b87d">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006"/>
+        <rdfs:label xml:lang="en">hasInterventionType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+        <rdfs:label xml:lang="en">hasPhase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_de69167c_6496_45f8_a219_460338ca2942 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_de69167c_6496_45f8_a219_460338ca2942">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_32d37386_bd02_4de1_8261_c403dea9ee15"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b"/>
+        <rdfs:label xml:lang="en">hasSetting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_e0c80904_9e96_417e_8d0f_b6b2fe113624 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_e0c80904_9e96_417e_8d0f_b6b2fe113624">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:label xml:lang="en">occursIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_e8af7716_7522_4f58_9973_e14a24bd761d -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_e8af7716_7522_4f58_9973_e14a24bd761d">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1"/>
+        <rdfs:label xml:lang="es">diagnosedAtAge</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_f01b9f76_4d2a_41a9_9f35_c4fd352cd4fd -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_f01b9f76_4d2a_41a9_9f35_c4fd352cd4fd">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_94988f7f_4897_4e11_bd8d_a6b3af1a7da4"/>
+        <rdfs:label xml:lang="en">hasParticipant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_f35f2ef0_e0db_4fbf_b9bc_b7eceb6e048d -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_f35f2ef0_e0db_4fbf_b9bc_b7eceb6e048d">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_6966f7cc_4322_4e88_851b_e88b4ced8b97"/>
+        <rdfs:label xml:lang="es">assessedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#unitType">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_777bfb53_94d6_4ab5_89d9_00382bed9257"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_0428fbf7_0c8c_4ac0_8536_e5d84237cd9f -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_0428fbf7_0c8c_4ac0_8536_e5d84237cd9f">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">isGeneralizationResult</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446 -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">hasPosition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_35f523b1_c246_48ee_884c_cb82f5233290 -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_35f523b1_c246_48ee_884c_cb82f5233290">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cbacdb8a_1075_4edb_911f_905069d72ec2"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">e.g 500mg</rdfs:comment>
+        <rdfs:label xml:lang="es">drugDose</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_39ebb95b_e5c5_4f3d_8e8d_68bb3fa00cbb -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_39ebb95b_e5c5_4f3d_8e8d_68bb3fa00cbb">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_22bff31e_fc5d_4eaa_bf1a_30c24700e6b8"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">hasIdentifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_adc7ea81_7d58_4d2a_bb44_c5618eceda49 -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_adc7ea81_7d58_4d2a_bb44_c5618eceda49">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label xml:lang="en">hasValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_b26ce709_574c_479a_af05_dbf62b95f4cd -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_b26ce709_574c_479a_af05_dbf62b95f4cd">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">hasNumberOfSessions</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_d733cb18_4952_4d0c_a6a8_428343af0d80 -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_d733cb18_4952_4d0c_a6a8_428343af0d80">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_31e51d85_39ca_4f3e_8816_65ce7e1ca62c"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5424f6fd_bab3_44d6_a22f_e0df75ddf707"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">hasSuggestedITOrder</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_ec6580fb_c3ff_4de5_8c7d_3338fc1592b4 -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_ec6580fb_c3ff_4de5_8c7d_3338fc1592b4">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cbacdb8a_1075_4edb_911f_905069d72ec2"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">e.g &quot;paracetamol&quot;</rdfs:comment>
+        <rdfs:label xml:lang="es">drugName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minutes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#minutes">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#seconds -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#seconds">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0003e29a_df26_4201_be6f_0dcdc84669c7 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0003e29a_df26_4201_be6f_0dcdc84669c7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4a020803_2bac_46f2_8771_f19ccb22b526"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+        <rdfs:label xml:lang="es">AcrossSubjectMBDItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_f35f2ef0_e0db_4fbf_b9bc_b7eceb6e048d"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_6966f7cc_4322_4e88_851b_e88b4ced8b97"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Disease or state that someone has or is in.</rdfs:comment>
+        <rdfs:label xml:lang="en">Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cf1c6fdc_c479_4561_97b0_bbe6a821b87d"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A phase where intervention is carried out</rdfs:comment>
+        <rdfs:label xml:lang="en">InterventionPhase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1448cd9e_b7b1_403d_b916_8e50a7b2bd21 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1448cd9e_b7b1_403d_b916_8e50a7b2bd21">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_279c6995_743a_42d1_a6c0_b830b5879853"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_adf79884_4842_46a6_8533_f294ffe86dd7"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+        <rdfs:comment xml:lang="en">A multiple-baseline design where the outcome varies across the substudies</rdfs:comment>
+        <rdfs:label xml:lang="es">AcrossOutcomeMBDDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_14b9e6af_2d4e_4f98_9f6d_a0c872b54e3a -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_14b9e6af_2d4e_4f98_9f6d_a0c872b54e3a">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_6966f7cc_4322_4e88_851b_e88b4ced8b97"/>
+        <rdfs:comment xml:lang="en">Observation of the patient by a clinician, doctor or therapist to determine a diagnosis</rdfs:comment>
+        <rdfs:label xml:lang="es">ClinicalObservation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_175621e6_883f_4cc5_8d70_65ea9743f857 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_175621e6_883f_4cc5_8d70_65ea9743f857">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_279c6995_743a_42d1_a6c0_b830b5879853"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0003e29a_df26_4201_be6f_0dcdc84669c7"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+        <rdfs:comment xml:lang="en">A multiple-baseline design where the subject varies across substudies</rdfs:comment>
+        <rdfs:label xml:lang="es">AcrossSubjectMBDDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1cdf466b_65ee_419d_84b0_7cc44932395e -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1cdf466b_65ee_419d_84b0_7cc44932395e">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+        <rdfs:comment xml:lang="en">SSD design in which the intervention is concluded or stopped for some time after it has been applied</rdfs:comment>
+        <rdfs:label xml:lang="es">WithdrawalDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_616ae2b0_4c48_459d_8bbd_d3dd1175b6f5"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_777bfb53_94d6_4ab5_89d9_00382bed9257"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Phase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_22bff31e_fc5d_4eaa_bf1a_30c24700e6b8 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_22bff31e_fc5d_4eaa_bf1a_30c24700e6b8">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cf1c6fdc_c479_4561_97b0_bbe6a821b87d"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_39ebb95b_e5c5_4f3d_8e8d_68bb3fa00cbb"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">In SSD studies interventions are usually identified by one letter (B,C, etc) in order to facilitate their presentation (e.g an alternating treatment represented as ABCDBDCDCB). The InterventionTypeSugar is characterized by the pair of properties &lt;hasInterventionType, hasIdentifier&gt;and links each type of intervention (e.g praise the child) with the letter that has been used in the study to name it (e.g B).</rdfs:comment>
+        <rdfs:label xml:lang="es">InterventionTypeSugar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_31e51d85_39ca_4f3e_8816_65ce7e1ca62c -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_31e51d85_39ca_4f3e_8816_65ce7e1ca62c">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_2f28349d_d61b_44f5_8f56_e59ff75f2dcb"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_22bff31e_fc5d_4eaa_bf1a_30c24700e6b8"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cf1c6fdc_c479_4561_97b0_bbe6a821b87d"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_d733cb18_4952_4d0c_a6a8_428343af0d80"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A phase were two or more intervention types are used INTERCALADAMENTEXX</rdfs:comment>
+        <rdfs:label xml:lang="es">AlternatingInterventionPhase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_32d37386_bd02_4de1_8261_c403dea9ee15 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_32d37386_bd02_4de1_8261_c403dea9ee15">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_de69167c_6496_45f8_a219_460338ca2942"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+        <rdfs:label xml:lang="es">AcrossSettingMBDItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_953a31f0_8c16_4f4c_b1c9_b76b1bf504ff"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_e0c80904_9e96_417e_8d0f_b6b2fe113624"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cf1c6fdc_c479_4561_97b0_bbe6a821b87d"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_adc7ea81_7d58_4d2a_bb44_c5618eceda49"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_3cdcc380_2d19_459e_9faa_ed0efa98ff98 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_3cdcc380_2d19_459e_9faa_ed0efa98ff98">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">The variable of interest that the study measures; i.e. the dependent variable (e.g the number of tantrums a child has during one day)</rdfs:comment>
+        <rdfs:label xml:lang="en">Outcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_42605488_f07f_4b51_b7f4_09a5b4078325 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_42605488_f07f_4b51_b7f4_09a5b4078325">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_31e51d85_39ca_4f3e_8816_65ce7e1ca62c"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="es">AlternatingTreatmentDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_ac7b03c5_d719_4816_b9f4_e18bf0bde8bf"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_3cdcc380_2d19_459e_9faa_ed0efa98ff98"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_f01b9f76_4d2a_41a9_9f35_c4fd352cd4fd"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_94988f7f_4897_4e11_bd8d_a6b3af1a7da4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A single-subject design is a kind of study that focuses in a single individual, instead of the more usual group designs, which focus on groups of individuals.</rdfs:comment>
+        <rdfs:label xml:lang="en">SingleSubjectDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_4e299f3f_7857_4041_853f_383c83e7108a -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_4e299f3f_7857_4041_853f_383c83e7108a">
+        <rdfs:label xml:lang="es">Gender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5424f6fd_bab3_44d6_a22f_e0df75ddf707 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5424f6fd_bab3_44d6_a22f_e0df75ddf707">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_2f28349d_d61b_44f5_8f56_e59ff75f2dcb"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_22bff31e_fc5d_4eaa_bf1a_30c24700e6b8"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_cf1c6fdc_c479_4561_97b0_bbe6a821b87d"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_d733cb18_4952_4d0c_a6a8_428343af0d80"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A phase where just one intervention type is used, but its application varies gradually (e.g the intensity of the intervention increases with time)</rdfs:comment>
+        <rdfs:label xml:lang="es">GradualInterventionPhase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_593666ea_9721_49f0_87e4_072cd1eaa372 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_593666ea_9721_49f0_87e4_072cd1eaa372">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1cdf466b_65ee_419d_84b0_7cc44932395e"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1cdf466b_65ee_419d_84b0_7cc44932395e"/>
+        <rdfs:comment xml:lang="en">Withdrawal design in which the intervention is stopped and not resumed after it has been applied. It concludes with a baseline phase were no intervention is applied</rdfs:comment>
+        <rdfs:label xml:lang="es">ABA_Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_5da4dd0b_5381_4123_a8ea_554716b52506">
+        <owl:equivalentClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_94988f7f_4897_4e11_bd8d_a6b3af1a7da4"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_25b1ece3_da6f_4da9_a760_8f9aa07db05f"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cbacdb8a_1075_4edb_911f_905069d72ec2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_4826fc9c_c497_4bec_875e_6a25b555bba3"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0a104981_b6d2_4044_8a07_8e07d46b86d9"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_787ea754_94b7_4f64_a25a_1ecbc1906eda"/>
+                <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_38e96ec6_562f_4899_9334_be9191fbb057"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_582d7e75_b43f_478f_a895_b518cab4f6ce"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_e8af7716_7522_4f58_9973_e14a24bd761d"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_661090a9_f593_4752_8b5a_f8e01ec21982 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_661090a9_f593_4752_8b5a_f8e01ec21982">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_279c6995_743a_42d1_a6c0_b830b5879853"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_32d37386_bd02_4de1_8261_c403dea9ee15"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f"/>
+        <rdfs:comment xml:lang="en">A multiple-baseline design where the setting varies across substudies</rdfs:comment>
+        <rdfs:label xml:lang="es">AcrossSettingMBDDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_68061f02_6320_4d78_8156_8a38d02cd62e -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_68061f02_6320_4d78_8156_8a38d02cd62e">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_6966f7cc_4322_4e88_851b_e88b4ced8b97"/>
+        <rdfs:label xml:lang="es">StandardizedInstrument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_6966f7cc_4322_4e88_851b_e88b4ced8b97 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_6966f7cc_4322_4e88_851b_e88b4ced8b97">
+        <rdfs:comment xml:lang="en">It indicates how the condition was assessed</rdfs:comment>
+        <rdfs:label xml:lang="es">ConditionAssessmentMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_747269be_8f46_46b7_bd60_94998ec4e4d1">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#minutes"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#seconds"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">For representing the age of a person in years and/or months (e.g 3 years and 2 months)</rdfs:comment>
+        <rdfs:label xml:lang="es">AgeDescription</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_777bfb53_94d6_4ab5_89d9_00382bed9257 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_777bfb53_94d6_4ab5_89d9_00382bed9257">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2006/time#unitType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2006/time#TemporalUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_adc7ea81_7d58_4d2a_bb44_c5618eceda49"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">For representing how often an event occurs (e.g.  the participant has tantrums 3 times a day)</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">MBDItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_94988f7f_4897_4e11_bd8d_a6b3af1a7da4 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_94988f7f_4897_4e11_bd8d_a6b3af1a7da4">
+        <rdfs:label xml:lang="en">Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_998e7a85_004b_442a_b59f_ef91072ec9d5 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_998e7a85_004b_442a_b59f_ef91072ec9d5">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1cdf466b_65ee_419d_84b0_7cc44932395e"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e6506671_2704_4fb0_9e0b_6e1581add9d5"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</owl:hasValue>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:cardinality>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:cardinality>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Withdrawal design in which the intervention is stopped for some time after it has been applied. During this time baseline results are taken. Then, the same intervention is resumed and and later stopped again. It can be followed by a follow-up phase.</rdfs:comment>
+        <rdfs:label xml:lang="es">ABAB_Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_a1faf1b6_7eab_445f_a4f9_28305722a6f8 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_a1faf1b6_7eab_445f_a4f9_28305722a6f8">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+        <rdfs:comment xml:lang="en">It covers the most simple types of SSD (e.g designs without withdrawal, without multiple baselines and without alternating treatments).</rdfs:comment>
+        <rdfs:label xml:lang="es">SimpleDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_adf79884_4842_46a6_8533_f294ffe86dd7 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_adf79884_4842_46a6_8533_f294ffe86dd7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_ac7b03c5_d719_4816_b9f4_e18bf0bde8bf"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_3cdcc380_2d19_459e_9faa_ed0efa98ff98"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+        <rdfs:label xml:lang="es">AcrossOutcomeMBDItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">It represents the environment where the intervention phase takes place (e.g at school)</rdfs:comment>
+        <rdfs:label xml:lang="en">Setting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_84a93a8e_4e28_4f11_a667_d76b50b26970"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">It indicates what the result is representing (e.g duration, percentage)</rdfs:comment>
+        <rdfs:label xml:lang="en">FormOfOutcome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cba65829_ed43_4408_9403_7e4c9d95f851 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cba65829_ed43_4408_9403_7e4c9d95f851">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_a1faf1b6_7eab_445f_a4f9_28305722a6f8"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_16ef4741_e082_4e96_b1ba_f80c4c408446"/>
+                                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_d0cb9ac1_6417_45f7_b432_a1f6d9da8346"/>
+                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_a1faf1b6_7eab_445f_a4f9_28305722a6f8"/>
+        <rdfs:comment xml:lang="en">Simple SSD design which includes a baseline phase followed by an intervention phase</rdfs:comment>
+        <rdfs:label xml:lang="es">AB_Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cbacdb8a_1075_4edb_911f_905069d72ec2 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_cbacdb8a_1075_4edb_911f_905069d72ec2">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_616ae2b0_4c48_459d_8bbd_d3dd1175b6f5"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_777bfb53_94d6_4ab5_89d9_00382bed9257"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_35f523b1_c246_48ee_884c_cb82f5233290"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLDataProperty_ec6580fb_c3ff_4de5_8c7d_3338fc1592b4"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">For representing which drugs the participant takes</rdfs:comment>
+        <rdfs:label xml:lang="es">DrugIntake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_dcc49e46_a6f6_4b97_b85b_c034ec1a2d26 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_dcc49e46_a6f6_4b97_b85b_c034ec1a2d26">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_6966f7cc_4322_4e88_851b_e88b4ced8b97"/>
+        <rdfs:label xml:lang="es">NonStandardizedInstrument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+        <rdfs:comment xml:lang="en">A phase where baseline results are taken; i.e. without intervention</rdfs:comment>
+        <rdfs:label xml:lang="es">BaselinePhase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e14e6d5f_2631_450e_8f3e_828e3bc1c7da -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e14e6d5f_2631_450e_8f3e_828e3bc1c7da">
+        <rdfs:comment xml:lang="en">For giving more information about a result (e.g if the outcome involves that the child kicks a ball, one feature of interest could be which leg was used to kick the ball)</rdfs:comment>
+        <rdfs:label xml:lang="es">FeatureOfInterest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e4e23113_446f_4044_9c6a_77e614f5477f">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_279c6995_743a_42d1_a6c0_b830b5879853"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_79791bdd_2cba_4b8a_84f7_4d128c715085"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLObjectProperty_0ae90f3b_b75f_45b1_abbf_15eeda321d18"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1cdf466b_65ee_419d_84b0_7cc44932395e"/>
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_42605488_f07f_4b51_b7f4_09a5b4078325"/>
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_a1faf1b6_7eab_445f_a4f9_28305722a6f8"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_48cb7198_6221_4377_ae4a_7013371324a1"/>
+        <rdfs:comment xml:lang="en">A SSD design where multiple substudies are carried out in parallel, each with a different length of the baseline phase. The same type of intervention is used in all the substudies, but they differ from each other in one of the following dimensions: the outcome (i.e what is being studied), the setting (i.e where it is being studied) or the subject (e.g who is being studied)</rdfs:comment>
+        <rdfs:label xml:lang="es">MultipleBaselineDesign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e6506671_2704_4fb0_9e0b_6e1581add9d5 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e6506671_2704_4fb0_9e0b_6e1581add9d5">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_1ef94855_d2d0_4476_a025_57628b3e9d78"/>
+        <rdfs:comment xml:lang="en">A phase were results are taken for follow up (e.g some weeks after the study is concluded)</rdfs:comment>
+        <rdfs:label xml:lang="es">FollowUpPhase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_f1c1e52b_9c3c_4577_be26_8d2466cf38a4 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_f1c1e52b_9c3c_4577_be26_8d2466cf38a4">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+        <rdfs:comment xml:lang="en">A phase where just one intervention type is used, and always in a similar way (e.g the intensity of the intervention does not change)</rdfs:comment>
+        <rdfs:label xml:lang="es">SimpleInterventionPhase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">InterventionType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#GeneralDurationDescription -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalUnit -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalUnit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_079649a2_e9f1_4030_b10b_5ba5db4a99bf -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_079649a2_e9f1_4030_b10b_5ba5db4a99bf">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023"/>
+        <rdfs:comment xml:lang="en">The result represents intensity of the behaviour (e.g. the intensity of the tantrum)</rdfs:comment>
+        <rdfs:label xml:lang="es">magnitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_151aaf2d_c639_40c4_939a_c142711953dc -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_151aaf2d_c639_40c4_939a_c142711953dc">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b"/>
+        <rdfs:label xml:lang="es">work</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_1a587c4e_55f4_4d4e_a613_43e6644961bf -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_1a587c4e_55f4_4d4e_a613_43e6644961bf">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023"/>
+        <rdfs:comment xml:lang="en">The result represents the number of times the behaviour occurs within a particular time period (e.g how many times a tantrum occurs in 24 hours)</rdfs:comment>
+        <rdfs:label xml:lang="es">frequency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_31a4570f_15f1_4844_bfc4_4067bb34f83f -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_31a4570f_15f1_4844_bfc4_4067bb34f83f">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023"/>
+        <rdfs:comment xml:lang="en">The result represents the length time between events (e.g. between two tantrums)</rdfs:comment>
+        <rdfs:label xml:lang="es">interval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_34cba07a_2407_477f_974c_a821ad28628e -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_34cba07a_2407_477f_974c_a821ad28628e">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023"/>
+        <rdfs:comment xml:lang="en">The result represents the percentage of times the behaviour occurs</rdfs:comment>
+        <rdfs:label xml:lang="es">percentage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_65de35ff_fc20_4237_82ee_76d86a1db174 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_65de35ff_fc20_4237_82ee_76d86a1db174">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b"/>
+        <rdfs:label xml:lang="es">home</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_a5779144_8149_411c_b477_e15042654af6 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_a5779144_8149_411c_b477_e15042654af6">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_4e299f3f_7857_4041_853f_383c83e7108a"/>
+        <rdfs:label xml:lang="es">male</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_b17b056a_d6d6_47f5_afbd_5d554e708db5 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_b17b056a_d6d6_47f5_afbd_5d554e708db5">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_4e299f3f_7857_4041_853f_383c83e7108a"/>
+        <rdfs:label xml:lang="es">female</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_da40ca89_a8fa_4c21_820b_1e5457fa3480 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_da40ca89_a8fa_4c21_820b_1e5457fa3480">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_c18aa533_d1fe_426b_806c_1c1c9e03a023"/>
+        <rdfs:comment xml:lang="en">The result represents the lenght of time an event lasts (e.g how long the tantrum lasts)</rdfs:comment>
+        <rdfs:label xml:lang="es">duration</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_df7b2f59_82f0_4b62_9fb9_6a4a06d969d3 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_df7b2f59_82f0_4b62_9fb9_6a4a06d969d3">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b"/>
+        <rdfs:label xml:lang="es">playground</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_e956efeb_7e57_46dc_9683_7f8882f9e2f1 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_e956efeb_7e57_46dc_9683_7f8882f9e2f1">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ae049502_ec07_41fa_bf12_e53d2308d73b"/>
+        <rdfs:label xml:lang="es">school</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_ec8e4275_d3b6_4840_854d_370723efdb2d -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLNamedIndividual_ec8e4275_d3b6_4840_854d_370723efdb2d">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_fad2afff_de0a_4f5b_9f41_eab43cd2f006"/>
+        <rdfs:label xml:lang="es">noIntervention</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0003e29a_df26_4201_be6f_0dcdc84669c7"/>
+            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_32d37386_bd02_4de1_8261_c403dea9ee15"/>
+            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_adf79884_4842_46a6_8533_f294ffe86dd7"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_0d1cc471_5340_48db_8e21_74b7084b3b73"/>
+            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_ddfc9a26_bfaa_474d_a910_29bccc5443d3"/>
+            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/SSDOntFM#OWLClass_e6506671_2704_4fb0_9e0b_6e1581add9d5"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

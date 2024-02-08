@@ -1,0 +1,3888 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#"
+     xml:base="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt"
+     xmlns:KiReSOntFM="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:TrhOnt="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fma="http://purl.org/sig/ont/fma/"
+     xmlns:GlenOnt1="http://bdi.si.ehu.es/bdi/ontologies/GlenOnt/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:GlenOnt="http://bdi.si.ehu.es/bdi/ontologies/GlenOnt#">
+    <owl:Ontology rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt">
+        <owl:imports rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOnt"/>
+        <terms:license>http://purl.org/NET/rdflicense/cc-by3.0</terms:license>
+        <dc:creator xml:lang="en">BDI group</dc:creator>
+        <dc:title xml:lang="en">Telerehabilitation ontology (TrhOnt)</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#answerTo -->
+
+    <owl:AnnotationProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#answerTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OWLObjectProperty_150f4fc8_7ca7_40ff_9229_cc7626f739aa -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OWLObjectProperty_150f4fc8_7ca7_40ff_9229_cc7626f739aa">
+        <owl:inverseOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#recommended"/>
+        <rdfs:label xml:lang="es">recommendedFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OWLObjectProperty_d1cf5fdf_38ac_4a82_b3b2_a3b128379a10 -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OWLObjectProperty_d1cf5fdf_38ac_4a82_b3b2_a3b128379a10">
+        <owl:inverseOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#contraindicated"/>
+        <rdfs:label xml:lang="es">contraindicatedFor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#contraindicated -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#contraindicated">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Exercise"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate contraindicated exercises for a patient</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAbility -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAbility">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Ability"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate an ability to be reached</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnatomicalPlane -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnatomicalPlane">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DynamicExploration"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#StaticExploration"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the anatomical plane</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnomaly -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnomaly">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Anomaly"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate an anomaly</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate an answer to the questions of the physiotherapy record</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDevice -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDevice">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthExploration"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Device"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the device to be used in the measurement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDiagnosis">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Diagnosis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a diagnosis</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDrugDose -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDrugDose">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugIntake"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugDose"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the drug dose</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDrugIntake -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDrugIntake">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugIntake"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate how to take a drug</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDynamicExploration -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDynamicExploration">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DynamicExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the dynamic exploration of the patient</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasEvolutionItem -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasEvolutionItem">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#EvolutionItem"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the evolution items of the patient</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasExternalDiagnosis -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasExternalDiagnosis">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalDiagnosis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate an external (not physiotherapy) diagnosis</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasExternalTerminology -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasExternalTerminology">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugIntake"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalDiagnosis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the external terminology being used</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFrequency -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFrequency">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugIntake"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Frequency"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a frequency</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFunctionalExploration -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFunctionalExploration">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a functional exploration</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFunctionalTest -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFunctionalTest">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalExploration"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalityTest"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a test used during a functional exploration</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGender -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGender">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Gender"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the gender of the patient</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoal">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a goal to be reached</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoalLevel -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoalLevel">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the level in which a goal wants to be reached</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasIntensity -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasIntensity">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate an intensity (e.g. pain)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasLongTermGoal -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasLongTermGoal">
+        <rdfs:subPropertyOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoal"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a long term goal to be reached</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMidTermGoal -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMidTermGoal">
+        <rdfs:subPropertyOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoal"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a midterm goal to be reached</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMovementExploration -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMovementExploration">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a movement exploration</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMuscleStrengthExploration -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMuscleStrengthExploration">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a muscle strength exploration</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMuscleStrengthScale -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMuscleStrengthScale">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthExploration"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthScale"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the scale used to measuer the muscle strength</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasOrthopedicExploration -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasOrthopedicExploration">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate an orthopedic exploration</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasOrthopedicTest -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasOrthopedicTest">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicExploration"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the test used in an orthopedic exploration</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPastHistory -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPastHistory">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FamilyOrPersonalPastHistoryItem"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the past medical history of the patient</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPatient -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPatient">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FamilyOrPersonalPastHistoryItem"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Self."/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the patient of a past history item</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasProfession -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasProfession">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Profession"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a profession</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRecord -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRecord">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the record of a patient</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRisk -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRisk">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Profession"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the risk of a profession</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasShortTermGoal -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasShortTermGoal">
+        <rdfs:subPropertyOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoal"/>
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a short term goal to be reached</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasStaticExploration -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasStaticExploration">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#StaticExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a static exploration</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTimespan -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTimespan">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Timespan"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a timespan</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTreatmentProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTreatmentProtocol">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#TreatmentProtocol"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a treatment protocol</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasUnit">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate a unit of measurement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#recommended -->
+
+    <owl:ObjectProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#recommended">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:range rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Exercise"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">To indicate the recommended exercises for a patient</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAge">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDischargeDate -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDischargeDate">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFinalEvaluationSummary -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFinalEvaluationSummary">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasNumberOfSessions -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasNumberOfSessions">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasQuantifier -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasQuantifier">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasROMvalue -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasROMvalue">
+        <rdfs:domain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTermCode -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTermCode">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#validFrom -->
+
+    <owl:DatatypeProperty rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#validFrom">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Ability -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Ability">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capacity of the patient to perform some activity</rdfs:comment>
+        <rdfs:label xml:lang="en">Ability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anatomical plane (frontal, saggital, transverse)</rdfs:comment>
+        <rdfs:label xml:lang="en">AnatomicalPlane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Anomaly -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Anomaly">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma67165"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasIntensity"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTimespan"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Timespan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anomaly</rdfs:comment>
+        <rdfs:label xml:lang="en">Anomaly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Response to an item of the patient&apos;s physiotherapy record</rdfs:comment>
+        <rdfs:label xml:lang="en">Answer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.1 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAge"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the patient&apos;s age?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.10 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.10">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#validFrom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When was the treatment started?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.10</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.11 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.11">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFrequency"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Frequency"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the frequency of the treatment?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.11</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.12 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.12">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasExternalDiagnosis"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalDiagnosis"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Which non-physiotherapy-related diagnoses does the patient have?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.12</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.13 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.13">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDrugIntake"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugIntake"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Which drugs does the patient currently take?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.13</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.14 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.14">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGender"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Gender"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the patient&apos;s gender?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.14</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.15 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.15">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasNumberOfSessions"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How many sessions has the patient attended?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.15</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.16 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.16">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDischargeDate"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the patient&apos;s discharge date?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.16</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.17 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.17">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasStaticExploration"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#StaticExploration"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the visual static exploration of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.17</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.18 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.18">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDynamicExploration"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DynamicExploration"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the visual dynamic exploration of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.18</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.19 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.19">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMuscleStrengthExploration"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthExploration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the strength exploration of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.19</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.2 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnomaly"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Anomaly"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Which health issue does the patient report?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.20 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.20">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasOrthopedicExploration"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicExploration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the orthopedic exploration of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.20</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.21 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.21">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFunctionalExploration"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalExploration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the functional exploration of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.21</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.22 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.22">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasShortTermGoal"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What are the short term goals from the point of view of the physiotherapist?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.22</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.23 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.23">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMidTermGoal"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What are the mid term goals from the point of view of the physiotherapist?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.23</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.24 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.24">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasLongTermGoal"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What are the long term goals from the point of view of the physiotherapist?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.24</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.25 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.25">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTreatmentProtocol"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#TreatmentProtocol"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the treatment protocol for this patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.25</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.26 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.26">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasEvolutionItem"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#EvolutionItem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What&apos;s the evolution of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.26</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.27 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.27">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFinalEvaluationSummary"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the final summary of the evaluation of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.27</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.3 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.3">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoal"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Which are the patient’s recovery goals?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.3</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.4 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.4">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasVASvalue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How much pain does the patient report on the Visual Analogue Scale (VAS)?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.4</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.5 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.5">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMovementExploration"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Which results are obtained from the exploration of the joint movement of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.5</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.6 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.6">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDiagnosis"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Diagnosis"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the physiotherapy diagnostics of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.6</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.7 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.7">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPastHistory"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FamilyOrPersonalPastHistoryItem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Which is the family and personal past history of the patient?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.7</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.8 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.8">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the patient&apos;s name?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.8</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.9 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.9">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasProfession"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Profession"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What is the patient&apos;s profession?</rdfs:comment>
+        <rdfs:label xml:lang="en">CA1.9</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Device -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Device">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Device used to perform an exploration</rdfs:comment>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Diagnosis -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Diagnosis">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma67165"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#MovementType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasIntensity"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnosis</rdfs:comment>
+        <rdfs:label xml:lang="en">Diagnosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DiscreteQuantifier -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DiscreteQuantifier">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discrete quantifier</rdfs:comment>
+        <rdfs:label xml:lang="en">DiscreteQuantifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DislocationOfLeftGlenohumeralJoint -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DislocationOfLeftGlenohumeralJoint">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dislocation of the left glenohumeral joint</rdfs:comment>
+        <rdfs:label xml:lang="en">DislocationOfLeftGlenohumeralJoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DislocationOfRightGlenohumeralJoint -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DislocationOfRightGlenohumeralJoint">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dislocation of the right glenohumeral joint</rdfs:comment>
+        <rdfs:label xml:lang="en">DislocationOfRightGlenohumeralJoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugDose -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugDose">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasUnit"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit"/>
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#WeightUnit"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasQuantifier"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dose of a drug</rdfs:comment>
+        <rdfs:label xml:lang="en">DrugDose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugIntake -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugIntake">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasExternalTerminology"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTimespan"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Timespan"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDrugDose"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugDose"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFrequency"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Frequency"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTermCode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of how the patient took a drug</rdfs:comment>
+        <rdfs:label xml:lang="en">DrugIntake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugTerminology -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugTerminology">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External drug terminology</rdfs:comment>
+        <rdfs:label xml:lang="en">DrugTerminology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DynamicExploration -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DynamicExploration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnatomicalPlane"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dynamic exploration of the patient (the one related to movement)</rdfs:comment>
+        <rdfs:label xml:lang="en">DynamicExploration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#EvolutionItem -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#EvolutionItem">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#validFrom"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item to represent the evolution of a patient</rdfs:comment>
+        <rdfs:label xml:lang="en">EvolutionItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExerAbduLeftGlenoJGreaterThan80 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExerAbduLeftGlenoJGreaterThan80">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Exercise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovement"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovAbduLeftGJGreaterThan80"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#AuxiliaryExercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExerAbduRightGlenoJGreaterThan80 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExerAbduRightGlenoJGreaterThan80">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Exercise"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovement"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovAbduRightGJGreaterThan80"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#AuxiliaryExercise"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalDiagnosis -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalDiagnosis">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasExternalTerminology"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTimespan"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Timespan"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTermCode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diagnosis made based on external terminologies</rdfs:comment>
+        <rdfs:label xml:lang="en">ExternalDiagnosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External terminology  used to identify items (e.g SNOMED-CT)</rdfs:comment>
+        <rdfs:label xml:lang="en">ExternalTerminology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FamilyOrPersonalPastHistoryItem -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FamilyOrPersonalPastHistoryItem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPatient"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Self."/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasIntensity"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasTimespan"/>
+                        <owl:allValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Timespan"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Past history item, either of the patient or of his family members</rdfs:comment>
+        <rdfs:label xml:lang="en">FamilyOrPersonalPastHistoryItem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Frequency -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Frequency">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasUnit"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasQuantifier"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How often something occurs</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalExploration -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalExploration">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasFunctionalTest"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalityTest"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional exploration</rdfs:comment>
+        <rdfs:label xml:lang="en">FunctionalExploration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalityTest -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#FunctionalityTest">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External functionality test terminology</rdfs:comment>
+        <rdfs:label xml:lang="en">FunctionalityTest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Gender -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Gender">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gender of the patient</rdfs:comment>
+        <rdfs:label xml:lang="en">Gender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Goal">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAbility"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Ability"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasGoalLevel"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recovery goal</rdfs:comment>
+        <rdfs:label xml:lang="en">Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Level of recovery goal</rdfs:comment>
+        <rdfs:label xml:lang="en">GoalLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intensity (e.g , intensity of perceived pain)</rdfs:comment>
+        <rdfs:label xml:lang="en">Intensity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External medical terminology</rdfs:comment>
+        <rdfs:label xml:lang="en">MedicalTerminology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovAbduLeftGJGreaterThan80 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovAbduLeftGJGreaterThan80">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Movement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasComponent"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Submovement"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25929"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Abduction"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</xsd:minExclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#AuxiliaryMovement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovAbduRightGJGreaterThan80 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovAbduRightGJGreaterThan80">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Movement"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasComponent"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Submovement"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25927"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Abduction"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</xsd:minExclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#AuxiliaryMovement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAbduGJBetween90and143 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAbduGJBetween90and143">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Abduction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">144.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of abduction of the glenohumeral joint between 90 and 143 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAbduGJLessThan90 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAbduGJLessThan90">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Abduction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of abduction of the glenohumeral joint of less than 90 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAdduGJBetween27and35 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAdduGJBetween27and35">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Adduction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">36.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of adduction of the glenohumeral joint between 27 and 35 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAdduGJLessThan27 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAdduGJLessThan27">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Adduction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of adduction of the glenohumeral joint of less than 27 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtGJBetween25and39 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtGJBetween25and39">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Extension"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of extension of the glenohumeral joint between 25 and 39 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtGJLessThan25 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtGJLessThan25">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Extension"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of extension of the glenohumeral joint of less than 25 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtRotGJBetween55and87 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtRotGJBetween55and87">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#ExtRotation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">55.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">88.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of external rotation of the glenohumeral joint between 55 and 87 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtRotGJLessThan55 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtRotGJLessThan55">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#ExtRotation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">55.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of external rotation of the glenohumeral joint of less than 55 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploFlexGJBetween90and143 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploFlexGJBetween90and143">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Flexion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">144.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of flexion of the glenohumeral joint between 90 and 143 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploFlexGJLessThan90 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploFlexGJLessThan90">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#Flexion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasROMvalue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of flexion of the glenohumeral joint of less than 90 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploHorAbduGJLessThan32 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploHorAbduGJLessThan32">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#HorAbduction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">32.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of horizontal abduction of the glenohumeral joint of less than 32 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploHorAdduGJLessThan112 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploHorAdduGJLessThan112">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#HorAdduction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">112.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of adduction of the glenohumeral joint of less than 112 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploIntRotGJBetween45and71 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploIntRotGJBetween45and71">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#IntRotation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">72.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of internal rotation of the glenohumeral joint between 45 and 71 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploIntRotGJLessThan45 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploIntRotGJLessThan45">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma25912"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#IntRotation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasROMmax"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.0</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movement of internal rotation of the glenohumeral joint of less than 45 degrees</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExtension -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExtension">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#AuxiliaryMovement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma7490"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasMovementType"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#MovementType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasPain"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#TrueOrFalse"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasROMvalue"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of movements</rdfs:comment>
+        <rdfs:label xml:lang="en">MovementExploration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthExploration -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthExploration">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/sig/ont/fma/fma5022"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasDevice"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Device"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMuscleStrengthScale"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthScale"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exploration of the muscle strength</rdfs:comment>
+        <rdfs:label xml:lang="en">MuscleStrengthExploration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthScale -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthScale">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External muscle strength scale</rdfs:comment>
+        <rdfs:label xml:lang="en">MuscleStrengthScale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicExploration -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicExploration">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasOrthopedicTest"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orthopedic exploration</rdfs:comment>
+        <rdfs:label xml:lang="en">OrthopedicExploration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExternalTerminology"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">External orthopedic test</rdfs:comment>
+        <rdfs:label xml:lang="en">OrthopedicTest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PathologicalCondition">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathological condition</rdfs:comment>
+        <rdfs:label xml:lang="en">PathologicalCondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRecord"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient2015 -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient2015">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#patient2015"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of a specific patient. This class should not be part of this ontology, it will be created and eliminated dinamically when working with a specific patient. We include it as an example to support inferences described in our paper.</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient2015</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient2FlexGlenoJ -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient2FlexGlenoJ">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRecord"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.4"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasVASvalue"/>
+                                                        <owl:someValuesFrom>
+                                                            <rdfs:Datatype>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                                    <rdf:Description>
+                                                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</xsd:maxExclusive>
+                                                                    </rdf:Description>
+                                                                </owl:withRestrictions>
+                                                            </rdfs:Datatype>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.5"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMovementExploration"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:unionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAbduGJLessThan90"/>
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAdduGJLessThan27"/>
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtGJLessThan25"/>
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtRotGJLessThan55"/>
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploFlexGJLessThan90"/>
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploIntRotGJLessThan45"/>
+                                                                </owl:unionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#recommended"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOnt#Exer2FlexGlenoJ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient in phase 2 of the treatment protocol for the limited flexion of the glenohumeral joint</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient2FlexGlenoJ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient3FlexGlenoJ -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient3FlexGlenoJ">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRecord"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.5"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasMovementExploration"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <owl:Class>
+                                                                        <owl:unionOf rdf:parseType="Collection">
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAbduGJBetween90and143"/>
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploAdduGJBetween27and35"/>
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtGJBetween25and39"/>
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploExtRotGJBetween55and87"/>
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploFlexGJBetween90and143"/>
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploHorAbduGJLessThan32"/>
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploHorAdduGJLessThan112"/>
+                                                                            <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovExploIntRotGJBetween45and71"/>
+                                                                        </owl:unionOf>
+                                                                    </owl:Class>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#hasPain"/>
+                                                                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#False"/>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#recommended"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOnt#Exer3FlexGlenoJ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient in phase 3 of the treatment protocol for the limited flexion of the glenohumeral joint</rdfs:comment>
+        <rdfs:label xml:lang="en">Patient3FlexGlenoJ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PatientPastDislocationLeftGlenoJ -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PatientPastDislocationLeftGlenoJ">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRecord"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.7"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPastHistory"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DislocationOfLeftGlenohumeralJoint"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPatient"/>
+                                                                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Self."/>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#contraindicated"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExerAbduLeftGlenoJGreaterThan80"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient with past history of dislocation of the left glenohumeral joint</rdfs:comment>
+        <rdfs:label xml:lang="en">PatientPastDislocationLeftGlenoJ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PatientPastDislocationRightGlenoJ -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PatientPastDislocationRightGlenoJ">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRecord"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.7"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPastHistory"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DislocationOfRightGlenohumeralJoint"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasPatient"/>
+                                                                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Self."/>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#contraindicated"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ExerAbduRightGlenoJGreaterThan80"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patient with past history of dislocation of the right glenohumeral joint</rdfs:comment>
+        <rdfs:label xml:lang="en">PatientPastDislocationRightGlenoJ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnswer"/>
+                <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Answer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physiotherapy record of a patient</rdfs:comment>
+        <rdfs:label xml:lang="en">PhysiotherapyRecord</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Profession -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Profession">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasRisk"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasName"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Profession</rdfs:comment>
+        <rdfs:label xml:lang="en">Profession</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family member</rdfs:comment>
+        <rdfs:label xml:lang="en">Relative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value of the risk (e.g of a profession)</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Self. -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Self.">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The patient himself</rdfs:comment>
+        <rdfs:label xml:lang="en">Self.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#StaticExploration -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#StaticExploration">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAnatomicalPlane"/>
+                        <owl:someValuesFrom rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hasAssessmentValue"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Results for the static exploration of the patient</rdfs:comment>
+        <rdfs:label xml:lang="en">StaticExploration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of time</rdfs:comment>
+        <rdfs:label xml:lang="en">TimeUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Timespan -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Timespan">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Time span</rdfs:comment>
+        <rdfs:label xml:lang="en">Timespan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Unit -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Unit">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of measure</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of volume</rdfs:comment>
+        <rdfs:label xml:lang="en">VolumeUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#WeightUnit -->
+
+    <owl:Class rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#WeightUnit">
+        <rdfs:subClassOf rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit of weight</rdfs:comment>
+        <rdfs:label xml:lang="en">WeightUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma25927 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma25927"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma25929 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma25929"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma5022 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma5022"/>
+    
+
+
+    <!-- http://purl.org/sig/ont/fma/fma67165 -->
+
+    <owl:Class rdf:about="http://purl.org/sig/ont/fma/fma67165"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OWLNamedIndividual_6fde5fbb_8acc_425a_8ba8_c077d6f97638 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OWLNamedIndividual_6fde5fbb_8acc_425a_8ba8_c077d6f97638">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#PhysiotherapyRecord"/>
+        <hasAnswer rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.4"/>
+        <hasAnswer rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.5"/>
+        <hasAnswer rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.7"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of a specific physiotherapy record. We include it as an example to support inferences described in our paper.</rdfs:comment>
+        <rdfs:label xml:lang="es">record2015</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#a_few -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#a_few">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DiscreteQuantifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#a_lot -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#a_lot">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DiscreteQuantifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#acromioclavicular_joint_distraction_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#acromioclavicular_joint_distraction_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#acromioclavicular_shear_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#acromioclavicular_shear_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#adsons_maneuver -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#adsons_maneuver">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#afternoon -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#afternoon">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#allens_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#allens_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#anterior_drawer_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#anterior_drawer_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#apleys_scratch_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#apleys_scratch_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#apprehension_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#apprehension_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#atc -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#atc">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#aunt -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#aunt">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#biceps_load_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#biceps_load_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#brachial_plexus_stretch_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#brachial_plexus_stretch_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#brother -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#brother">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.4 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.4">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.4"/>
+        <KiReSOntFM:hasVASvalue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0</KiReSOntFM:hasVASvalue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.5 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.5">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.5"/>
+        <hasMovementExploration rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#movexp1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.7 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ca1.7">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#CA1.7"/>
+        <hasPastHistory rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#phi1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ccam -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ccam">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#centigram -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#centigram">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#WeightUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#centiliter -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#centiliter">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#clunk_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#clunk_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#continuous -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#continuous">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cousin -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cousin">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cpt -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cpt">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#crank_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#crank_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cross_over_impingement_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cross_over_impingement_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cubic_centimeter -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cubic_centimeter">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cubic_millimeter -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#cubic_millimeter">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#daughter -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#daughter">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#day -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#day">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#discontinuous -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#discontinuous">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#distressing -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#distressing">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#drop_arm_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#drop_arm_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#empty_can_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#empty_can_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#father -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#father">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#feagin_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#feagin_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#female -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#female">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#fortnight -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#fortnight">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#french_horn_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#french_horn_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#frontal -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#frontal">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#galen -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#galen">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#gram -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#gram">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#WeightUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#grind_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#grind_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hawkins_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hawkins_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hour -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#hour">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#husband -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#husband">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#icd-10 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#icd-10">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#icd-9-cm -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#icd-9-cm">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#improve -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#improve">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#intense -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#intense">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#jobe_relocation_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#jobe_relocation_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#kilogram -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#kilogram">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#WeightUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#leftGlenoJoint2015 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#leftGlenoJoint2015">
+        <rdf:type rdf:resource="http://purl.org/sig/ont/fma/fma25929"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of a specific joint. We include it as an example to support inferences described in our paper.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#life -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#life">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#liter -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#liter">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#load_and_shift_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#load_and_shift_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#loinc -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#loinc">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ludingtons_sign -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ludingtons_sign">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#male -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#male">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#maternal_grandfather -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#maternal_grandfather">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#maternal_grandmother -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#maternal_grandmother">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mesh -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mesh">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mild -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mild">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mild_risk -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mild_risk">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#milligram -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#milligram">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#WeightUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#milliliter -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#milliliter">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#VolumeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#millisecond -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#millisecond">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#minute -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#minute">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#moderate -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#moderate">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#moderate_risk -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#moderate_risk">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#month -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#month">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#morning -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#morning">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mother -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mother">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#movexp1 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#movexp1">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MovementExploration"/>
+        <KiReSOntFM:hasLocation rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#leftGlenoJoint2015"/>
+        <KiReSOntFM:hasMovementType rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#flexion"/>
+        <KiReSOntFM:hasPain rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/KiReSOntFM#false"/>
+        <hasROMvalue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</hasROMvalue>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of a specific movement exploration. We include it as an example to support inferences described in our paper.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mrc_scale -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#mrc_scale">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#nagging -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#nagging">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ndf-rt -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#ndf-rt">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#neer_impingement_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#neer_impingement_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#nhs_clinical_terms -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#nhs_clinical_terms">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#night -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#night">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#no_intensity -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#no_intensity">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#no_risk -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#no_risk">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#obrien_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#obrien_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#opcs4 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#opcs4">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#oxford_scale -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#oxford_scale">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MuscleStrengthScale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#partial -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#partial">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#paternal_grandfather -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#paternal_grandfather">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#paternal_grandmother -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#paternal_grandmother">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#patient2015 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#patient2015">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Patient2015"/>
+        <hasRecord rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OWLNamedIndividual_6fde5fbb_8acc_425a_8ba8_c077d6f97638"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of a specific patient. We include it as an example to support inferences described in our paper.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#pectoralis_major_contracture_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#pectoralis_major_contracture_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#phi1 -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#phi1">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DislocationOfLeftGlenohumeralJoint"/>
+        <hasPatient rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#self"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Example of a specific pathological condition. We include it as an example to support inferences described in our paper.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#piano_key_sign -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#piano_key_sign">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#posterior_drawer_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#posterior_drawer_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#regain -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#regain">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#roos_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#roos_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#rxnorm -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#rxnorm">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#saggital -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#saggital">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#second -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#second">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#self -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#self">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Self."/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#several -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#several">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DiscreteQuantifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#severe -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#severe">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#severe_risk -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#severe_risk">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Risk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#shoulder_abduction_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#shoulder_abduction_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#sister -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#sister">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#snomed_ct -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#snomed_ct">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DrugTerminology"/>
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#son -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#son">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#speeds_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#speeds_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#sternoclavicular_joint_stress_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#sternoclavicular_joint_stress_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#stop -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#stop">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#strengthen -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#strengthen">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#GoalLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#sulcus_sign -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#sulcus_sign">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#total -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#total">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#transverse -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#transverse">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#AnatomicalPlane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#umls -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#umls">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#MedicalTerminology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#uncle -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#uncle">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#week -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#week">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#whole -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#whole">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#DiscreteQuantifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#wife -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#wife">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Relative"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#worst_posible -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#worst_posible">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#Intensity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#year -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#year">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#TimeUnit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#yergason_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#yergason_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#yocum_test -->
+
+    <owl:NamedIndividual rdf:about="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#yocum_test">
+        <rdf:type rdf:resource="http://bdi.si.ehu.es/bdi/ontologies/TrhOnt#OrthopedicTest"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+
